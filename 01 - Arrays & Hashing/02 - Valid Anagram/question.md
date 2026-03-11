@@ -24,7 +24,7 @@ Output: False
 Constraints:
 - `s` and `t` consist of lowercase English letters.
 
-Recommended Time & Space Complexity: O(n + m) & O(1)
+Recommended Time & Space Complexity: O(n + m) & O(1) since we have at most 26 different characters.
 
 Approach: Hashing (Hash Table)
 ___
