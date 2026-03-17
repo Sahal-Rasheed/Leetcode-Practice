@@ -1,0 +1,22 @@
+Intuition
+We can compute the product of all elements except the current one without using extra prefix and suffix arrays.
+Instead, we reuse the result array and build the answer in two simple passes:
+
+In the first pass, we fill res[i] with the product of all elements to the left of i (prefix product).
+In the second pass, we multiply each res[i] with the product of all elements to the right of i (postfix product).
+By maintaining two running values — prefix and postfix — we avoid the need for separate pref and suff arrays.
+This gives us the same logic as the previous method, but with O(1) extra space.
+
+Algorithm
+Initialize the result array res with all values set to 1.
+Create a variable prefix = 1.
+First pass (left to right):
+For each index i:
+Set res[i] = prefix (product of all elements to the left).
+Update prefix *= nums[i].
+Create a variable postfix = 1.
+Second pass (right to left):
+For each index i:
+Multiply res[i] by postfix (product of all elements to the right).
+Update postfix *= nums[i].
+Return the result array res.
