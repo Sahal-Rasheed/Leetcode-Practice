@@ -35,5 +35,5 @@ Constraints:
 
 Recommended Time & Space Complexity: O(m) & O(m + n)
 
-Approach: Array
+Approach: Array, Two Pointers
 ___
