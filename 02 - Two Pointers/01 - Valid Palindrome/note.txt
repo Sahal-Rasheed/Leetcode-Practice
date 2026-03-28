@@ -1,0 +1,13 @@
+Intuition
+To check if a string is a palindrome, we only care about letters and digits—everything else can be ignored.
+We can build a cleaned version of the string that contains only alphanumeric characters, all converted to lowercase for consistency.
+Once we have this cleaned string, the problem becomes very simple:
+a string is a palindrome if it is exactly the same as its reverse.
+
+Algorithm
+Create an empty string newStr.
+Loop through each character c in the input string:
+If c is alphanumeric, convert it to lowercase and add it to newStr.
+Compare newStr with its reverse (newStr[::-1]):
+If they are equal, return true.
+Otherwise, return false.
