@@ -29,7 +29,7 @@ Input: nums = [0,0,0]
 Output: [[0,0,0]]
 ```
 
-Recommended Time & Space Complexity: O(n^2) & O(1)
+Recommended Time & Space Complexity: O(n^2) & O(1) or O(n) depending on the sorting algorithm used.
 
 Approach: Two Pointers
 ___

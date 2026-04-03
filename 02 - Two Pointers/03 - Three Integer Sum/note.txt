@@ -1,0 +1,32 @@
+Intuition
+After sorting the array, we can fix one number and then search for the other two using the two-pointer technique.
+Sorting helps in two ways:
+
+It lets us skip duplicates easily.
+It ensures that moving the left or right pointer will increase or decrease the sum in a predictable way.
+For each fixed number a, we place two pointers:
+
+l starts just after i,
+r starts at the end.
+If the current sum is too large, we move r left to reduce it.
+If the sum is too small, we move l right to increase it.
+When the sum is exactly zero, we record the triplet and skip duplicates.
+
+Algorithm
+Sort the array to handle duplicates and enable two-pointer logic.
+Loop through the array using index i:
+Let a = nums[i].
+If a > 0, break (all remaining numbers are positive).
+Skip duplicate values for the first number.
+Set two pointers:
+l = i + 1
+r = len(nums) - 1
+While l < r:
+Compute threeSum = a + nums[l] + nums[r].
+If threeSum > 0, move r left.
+If threeSum < 0, move l right.
+If threeSum == 0:
+Add the triplet to the result.
+Move both pointers inward.
+Skip duplicates at the left pointer.
+Return the list of all valid triplets.
