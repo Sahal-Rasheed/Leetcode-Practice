@@ -1,0 +1,20 @@
+Intuition
+Using two pointers lets us efficiently search for the maximum area without checking every pair.
+We start with the widest container (left at start, right at end).
+The height is limited by the shorter line, so to potentially increase the area, we must move the pointer at the shorter line inward.
+Moving the taller line never helps because it keeps the height the same but reduces the width.
+By always moving the shorter side, we explore all meaningful possibilities.
+
+Algorithm
+Initialize two pointers:
+l = 0
+r = len(heights) - 1
+Set res = 0 to store the maximum area.
+While l < r:
+Compute the current area:
+area = min(heights[l], heights[r]) * (r - l)
+Update res with the maximum area so far.
+Move the pointer at the shorter height:
+If heights[l] <= heights[r], move l right.
+Otherwise, move r left.
+Return res after the pointers meet.
