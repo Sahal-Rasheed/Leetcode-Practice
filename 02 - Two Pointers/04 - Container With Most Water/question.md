@@ -20,6 +20,12 @@ Input: height = [2,2,2]
 Output: 4
 ```
 
+Example 3:
+```python
+Input: height = [1,1]
+Output: 1
+```
+
 
 Recommended Time & Space Complexity: O(n) & O(1)
 
