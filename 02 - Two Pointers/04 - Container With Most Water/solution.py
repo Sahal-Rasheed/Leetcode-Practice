@@ -18,6 +18,7 @@ if __name__ == "__main__":
     solution = Solution()
     print(solution.maxArea([1, 7, 2, 5, 4, 7, 3, 6]))  # Output: 36
     print(solution.maxArea([2, 2, 2]))  # Output: 4
+    print(solution.maxArea([1, 1]))  # Output: 1
 ## -- Time & Space Complexity -- ##
 ## Time Complexity: O(n)
 ## Space Complexity: O(1)
