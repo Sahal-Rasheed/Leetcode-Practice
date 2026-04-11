@@ -15,7 +15,7 @@ Input: height = [0,2,0,3,1,0,1,3,2,1]
 Output: 9
 ```
 
-Recommended Time & Space Complexity: O(n) & O(n)
+Recommended Time & Space Complexity: O(n) & O(1)
 
 Approach: Two Pointers
 ___

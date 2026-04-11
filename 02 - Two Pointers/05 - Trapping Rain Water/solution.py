@@ -1,0 +1,29 @@
+class Solution:
+    def trap(self, height: list[int]) -> int:
+        if not height:
+            return 0
+
+        l, r = 0, len(height) - 1  # noqa
+        leftMax, rightMax = height[l], height[r]
+        res = 0
+        while l < r:
+            if leftMax < rightMax:
+                l += 1  # noqa
+                leftMax = max(leftMax, height[l])
+                res += max(0, leftMax - height[l])
+            else:
+                r -= 1
+                rightMax = max(rightMax, height[r])
+                res += max(0, rightMax - height[r])
+        return res
+
+
+if __name__ == "__main__":
+    solution = Solution()
+    print(solution.trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]))  # Output: 6
+    print(solution.trap([3, 0, 2, 0, 4]))  # Output: 7
+    print(solution.trap([1, 0, 1]))  # Output: 1
+## -- Time & Space Complexity -- ##
+## Time Complexity: O(n)
+## Space Complexity: O(1)
+## ---------------------------- ##
